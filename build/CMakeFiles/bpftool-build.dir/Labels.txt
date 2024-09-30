@@ -1,0 +1,11 @@
+# Target labels
+ bpftool
+# Source files and their labels
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool-build
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool-build.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-build.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-configure.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-patch.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-update.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-download.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-mkdir.rule

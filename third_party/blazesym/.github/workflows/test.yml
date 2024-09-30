@@ -1,0 +1,297 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_call:
+
+env:
+  CARGO_TERM_COLOR: always
+  # Enable backtraces for panics but not for "regular" errors.
+  RUST_BACKTRACE: 1
+  RUST_LIB_BACKTRACE: 0
+  RUSTFLAGS: '-D warnings'
+
+jobs:
+  build:
+    name: Build [${{ matrix.runs-on }}, ${{ matrix.rust }}, ${{ matrix.profile }}, ${{ matrix.args }}]
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runs-on: [ubuntu-latest, macos-latest]
+        rust: [stable]
+        profile: [dev, release]
+        # gsym-in-apk requires `generate-unit-test-files` feature, which
+        # requires `llvm-gsymutil` installed. We don't want that dependency in
+        # this large OS spanning matrix.
+        args: ["--workspace --exclude=gsym-in-apk"]
+        include:
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            # Make sure to build *without* `--workspace` or feature
+            # unification may mean that `--no-default-features` goes
+            # without effect.
+            args: "--lib --no-default-features"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--lib --no-default-features --features=apk"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--lib --no-default-features --features=breakpad"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--lib --no-default-features --features=gsym"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--lib --no-default-features --features=zlib"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--lib --no-default-features --features=zstd"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--package=blazecli"
+          - runs-on: ubuntu-latest
+            rust: stable
+            profile: dev
+            args: "--package=blazesym-c"
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@master
+      with:
+        toolchain: ${{ matrix.rust }}
+    - uses: Swatinem/rust-cache@v2
+      with:
+        key: ${{ matrix.runs-on }}-${{ matrix.rust }}-${{ matrix.profile }}
+    - name: Build ${{ matrix.profile }}
+      run: |
+        cargo build --profile=${{ matrix.profile }} ${{ matrix.args }}
+  build-cross:
+    name: Cross-compile [${{ matrix.target }}]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [
+          aarch64-linux-android,
+          arm-linux-androideabi,
+          armv7-linux-androideabi,
+          x86_64-unknown-linux-musl,
+        ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: taiki-e/setup-cross-toolchain-action@v1
+        with:
+          target: ${{ matrix.target }}
+      - run: |
+          cargo build --lib
+  build-minimum:
+    name: Build using minimum versions of dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+      - run: cargo +nightly -Z minimal-versions update
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          # Please adjust README and rust-version field in Cargo.toml files when
+          # bumping version.
+          toolchain: 1.65.0
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --features="apk,backtrace,demangle,dwarf,gsym,tracing"
+  nop-rebuilds:
+    name: No-op rebuilds
+    runs-on: ubuntu-22.04
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@nightly
+    - name: Install required tools
+      run: sudo apt-get install -y llvm-14
+    - name: Check incremental rebuilds
+      env:
+        CARGO_OPTS: --features=generate-unit-test-files --workspace --quiet --tests
+      run: |
+        cargo check ${CARGO_OPTS}
+        # We need another build here to have the reference `output` file
+        # present. As long as we converge eventually it's probably good
+        # enough...
+        cargo check ${CARGO_OPTS}
+        output=$(CARGO_LOG=cargo::core::compiler::fingerprint=info cargo check ${CARGO_OPTS} 2>&1)
+        [ -z "${output}" ] || (echo "!!!! cargo check --tests rebuild was not a no-op: ${output} !!!!" && false)
+  test-coverage:
+    name: Test and coverage
+    runs-on: ubuntu-22.04
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@nightly
+    - uses: Swatinem/rust-cache@v2
+    - uses: actions/setup-python@v5
+      id: py312
+      with:
+        python-version: '3.12'
+    - name: Install required tools
+      run: sudo apt-get install -y llvm-14
+    - name: Install cargo-llvm-cov
+      uses: taiki-e/install-action@cargo-llvm-cov
+    - name: Test and gather coverage
+      env:
+        PYTHON: ${{ steps.py312.outputs.python-path }}
+      run: cargo llvm-cov --workspace --all-targets --features=nightly,generate-large-test-files --ignore-filename-regex=cli/src/ --lcov --output-path lcov.info -- --include-ignored
+    - name: Upload code coverage results
+      uses: codecov/codecov-action@v4
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      with:
+        files: lcov.info
+  test-sanitizers:
+    name: Test with ${{ matrix.sanitizer }} sanitizer
+    strategy:
+      fail-fast: false
+      matrix:
+        sanitizer: [address, leak]
+    runs-on: ubuntu-latest
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@nightly
+    - uses: Swatinem/rust-cache@v2
+      with:
+        key: ${{ matrix.sanitizer }}
+    - name: Enable debug symbols
+      run: |
+          # to get the symbolizer for debug symbol resolution
+          sudo apt-get install -y llvm-14
+          # to fix buggy leak analyzer:
+          # https://github.com/japaric/rust-san#unrealiable-leaksanitizer
+          sed -i '/\[features\]/i [profile.dev]' Cargo.toml
+          sed -i '/profile.dev/a opt-level = 1' Cargo.toml
+          cat Cargo.toml
+    - name: cargo test -Zsanitizer=${{ matrix.sanitizer }}
+      env:
+        # TODO: Ideally we'd set CFLAGS and CXXFLAGS as well, but some
+        #       of our transitive dependencies don't play nice with
+        #       ASAN.
+        #CFLAGS: "-fsanitize=${{ matrix.sanitizer }}"
+        #CXXFLAGS: "-fsanitize=${{ matrix.sanitizer }}"
+        RUSTFLAGS: "-Zsanitizer=${{ matrix.sanitizer }}"
+        ASAN_OPTIONS: "detect_odr_violation=0:detect_leaks=0"
+        LSAN_OPTIONS: ""
+      run: cargo test --workspace --lib --tests --target x86_64-unknown-linux-gnu
+  test-release:
+    name: Test with release build
+    runs-on: ubuntu-22.04
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install required tools
+      run: sudo apt-get install -y llvm-14
+    - uses: dtolnay/rust-toolchain@stable
+    - uses: Swatinem/rust-cache@v2
+    - run: cargo test --workspace --release
+  test-miri:
+    name: Test with Miri
+    runs-on: ubuntu-latest
+    env:
+      # Stack borrows are very experimental. Disable for now.
+      MIRIFLAGS: '-Zmiri-disable-stacked-borrows'
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@nightly
+      with:
+        components: miri
+    # Miri would honor our custom test runner, but doesn't work with it. We
+    # could conceivably override that by specifying
+    # CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER, except it appears as if Miri
+    # uses the runner itself. In short, it's a mess. Just remove any
+    # such custom configuration when running Miri.
+    - name: Remove .cargo/config.toml
+      run: rm .cargo/config.toml
+    - name: Run tests
+      run: cargo miri test --workspace --features=dont-generate-unit-test-files -- ":miri:"
+  test-examples:
+    name: Test examples
+    runs-on: ubuntu-22.04
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+    - run: cargo run --example backtrace
+    - run: cargo run --package gsym-in-apk
+  c-header:
+    name: Check generated C header
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+    - run: cargo check --package=blazesym-c --features=generate-c-header
+    - name: Check that C header is up-to-date
+      run: git diff --exit-code ||
+             (echo "!!!! CHECKED IN C HEADER IS OUTDATED !!!!" && false)
+  bench:
+    # Only run benchmarks on the final push. They are generally only
+    # informative because the GitHub Runners do not provide a stable
+    # performance baseline anyway.
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    name: Benchmark
+    runs-on: ubuntu-22.04
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@nightly
+    - name: Install required tools
+      run: sudo apt-get install -y llvm-14
+    - uses: Swatinem/rust-cache@v2
+    - name: Run benchmarks
+      shell: bash
+      run: |
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        cargo bench --workspace --features=nightly -- bench_ | tee --append $GITHUB_STEP_SUMMARY
+        # We use bencher format here for better relation to the above
+        # but also because it emits less other crap into our summary.
+        # Note that because libtest does not understand the
+        # `--output-format` option, we need to specify the benchmark
+        # binary (`main`) here and have a different invocation for
+        # libtest style benchmarks above. Sigh.
+        cargo bench --workspace --bench=main --bench=capi --features=generate-large-test-files,dont-generate-unit-test-files -- --output-format=bencher | tee --append $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+  clippy:
+    name: Lint with clippy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo clippy --workspace --no-deps --all-targets --features=dont-generate-unit-test-files -- -A unknown_lints -D clippy::todo
+  rustfmt:
+    name: Check code formatting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rustfmt
+      - run: cargo +nightly fmt --all -- --check
+  cargo-doc:
+    name: Generate documentation
+    runs-on: ubuntu-22.04
+    env:
+      LLVM_GSYMUTIL: /usr/bin/llvm-gsymutil-14
+      RUSTDOCFLAGS: '--cfg docsrs -D warnings'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+      - run: cargo doc --workspace --no-deps

@@ -1,0 +1,20 @@
+coverage:
+  status:
+    project:
+      default:
+        # We don't gate anything based on flaky code coverage reports.
+        informational: true
+      blazesym:
+        informational: true
+        paths:
+          - src/
+      blazesym-c:
+        informational: true
+        paths:
+          - capi/src/
+      # Note: blazecli is ignored at the llvm-cov level.
+    patch:
+      default:
+        informational: true
+github_checks:
+    annotations: false

@@ -1,0 +1,9 @@
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/libbpf.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/libbpf-build.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool-build.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym-build.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/file_monitor.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/edit_cache.dir
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/rebuild_cache.dir

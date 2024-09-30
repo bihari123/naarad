@@ -1,0 +1,13 @@
+# Target labels
+ blazesym
+# Source files and their labels
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym-complete.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-build.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-configure.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-download.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-install.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-mkdir.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-patch.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-update.rule

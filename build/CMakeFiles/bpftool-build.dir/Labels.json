@@ -1,0 +1,37 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool-build"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool-build.rule"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-build.rule"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-configure.rule"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-patch.rule"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-update.rule"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-download.rule"
+		},
+		{
+			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bpftool"
+		],
+		"name" : "bpftool-build"
+	}
+}

@@ -1,0 +1,25 @@
+/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/gen.o: \
+ gen.c \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/err.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/types.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/bpf.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/bpf.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/bpf_common.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_common.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_version.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_legacy.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_internal.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/relo_core.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/btf.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/btf.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/btf.h \
+ json_writer.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/compiler.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/compiler_types.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/compiler-gcc.h \
+ main.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/kernel.h \
+ /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/build_bug.h \
+ /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/hashmap.h

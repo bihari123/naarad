@@ -1,0 +1,11 @@
+# Target labels
+ libbpf
+# Source files and their labels
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/libbpf-build
+/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/libbpf-build.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-build.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-configure.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-patch.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-update.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-download.rule
+/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-mkdir.rule

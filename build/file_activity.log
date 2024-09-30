@@ -1,0 +1,19 @@
+2024-09-30 14:56:46 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/utils/log_init.c:14: Logging Initialized
+2024-09-30 14:56:49 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:56:49 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:56:50 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:56:50 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:56:57 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:56:57 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:56:58 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:56:58 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:57:20 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:57:20 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:57:21 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:57:21 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-09-30 14:57:22 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
+2024-09-30 14:57:22 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
