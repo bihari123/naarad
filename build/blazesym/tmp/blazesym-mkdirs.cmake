@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/media/tarun/1Tb/code/my_projects/naarad/third_party/blazesym"
-  "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-build"
-  "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym"
-  "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/tmp"
-  "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp"
-  "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src"
-  "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp"
+  "/media/tarun/ITB/code/my_projects/naarad/third_party/blazesym"
+  "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-build"
+  "/media/tarun/ITB/code/my_projects/naarad/build/blazesym"
+  "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/tmp"
+  "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp"
+  "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src"
+  "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp${cfgdir}") # cfgdir has leading slash
 endif()

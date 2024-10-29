@@ -1,21 +1,21 @@
-/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/btf_dumper.o: \
+/media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/btf_dumper.o: \
  btf_dumper.c \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/bitops.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/btf.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/err.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/btf.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_common.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_version.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/bpf.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/bpf.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/bpf_common.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_legacy.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/bitops.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/btf.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/err.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/btf.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_common.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_version.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/bpf.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/bpf.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/uapi/linux/bpf_common.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf_legacy.h \
  json_writer.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/compiler.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/compiler_types.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/compiler-gcc.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/compiler.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/compiler_types.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/compiler-gcc.h \
  main.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/kernel.h \
- /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/include/linux/build_bug.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/hashmap.h \
- /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf.h
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/kernel.h \
+ /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/include/linux/build_bug.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/hashmap.h \
+ /media/tarun/ITB/code/my_projects/naarad/build/bpftool/bootstrap/libbpf/include/bpf/libbpf.h

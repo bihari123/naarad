@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/tarun/1Tb/code/my_projects/naarad/src
+CMAKE_SOURCE_DIR = /media/tarun/ITB/code/my_projects/naarad/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/tarun/1Tb/code/my_projects/naarad/src
+CMAKE_BINARY_DIR = /media/tarun/ITB/code/my_projects/naarad/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/1Tb/code/my_projects/naarad/naarad/src/CMakeFiles /media/tarun/1Tb/code/my_projects/naarad/naarad/src//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/ITB/code/my_projects/naarad/naarad/src/CMakeFiles /media/tarun/ITB/code/my_projects/naarad/naarad/src//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/1Tb/code/my_projects/naarad/naarad/src/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/ITB/code/my_projects/naarad/naarad/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

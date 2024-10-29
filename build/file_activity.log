@@ -1,19 +1,165 @@
-2024-09-30 14:56:46 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/utils/log_init.c:14: Logging Initialized
-2024-09-30 14:56:49 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:56:49 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:56:50 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:56:50 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:56:57 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:56:57 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:56:58 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:56:58 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:57:16 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:57:20 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:57:20 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:57:21 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:57:21 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
-2024-09-30 14:57:22 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:258: inside send_with_retry
-2024-09-30 14:57:22 TRACE /media/tarun/1Tb/code/my_projects/naarad/include/message_queue/message.c:267: sending to the queue
+2024-10-29 12:07:57 TRACE /media/tarun/ITB/code/my_projects/naarad/include/utils/log_init.c:14: Logging Initialized
+2024-10-29 12:07:58 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[0] is 0
+2024-10-29 12:07:58 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[1] is 0
+2024-10-29 12:07:58 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[2] is 0
+2024-10-29 12:07:58 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[3] is 0
+2024-10-29 12:07:58 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[4] is 0
+2024-10-29 12:08:02 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:08:02 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is open
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 0
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 0
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 0
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:77: after update, the counter for open ius 1
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is open
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 0
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 0
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 0
+2024-10-29 12:08:06 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:77: after update, the counter for open ius 2
+2024-10-29 12:08:07 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[0] is 2
+2024-10-29 12:08:07 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[1] is 0
+2024-10-29 12:08:07 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[2] is 0
+2024-10-29 12:08:07 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[3] is 0
+2024-10-29 12:08:07 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[4] is 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:110: Total entries: 2
+
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 1
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 2
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:110: Total entries: 2
+
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 1
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:08 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 2
+2024-10-29 12:08:14 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is unlink
+2024-10-29 12:08:14 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 5
+2024-10-29 12:08:14 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 5
+2024-10-29 12:08:14 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 5
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[0] is 2
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[1] is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[2] is 1
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[3] is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[4] is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:110: Total entries: 3
+
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 1
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 2
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 5
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:385: unlink ops
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 3
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:110: Total entries: 3
+
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 1
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 2
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 5
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:385: unlink ops
+2024-10-29 12:08:15 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 3
+2024-10-29 12:34:55 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[0] is 2
+2024-10-29 12:34:55 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[1] is 0
+2024-10-29 12:34:55 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[2] is 1
+2024-10-29 12:34:55 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[3] is 0
+2024-10-29 12:34:55 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[4] is 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is open
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:77: after update, the counter for open ius 3
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is open
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 0
+2024-10-29 12:35:12 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:77: after update, the counter for open ius 4
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is open
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 0
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 0
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 0
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:77: after update, the counter for open ius 5
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:50: the operations is write
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:52: the operation code is 2
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/userspace/ebpf.c:64: the operation code for message is 2
+2024-10-29 12:35:18 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:64: inside increment for op_type: 2
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:110: Total entries: 7
+
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 1
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 2
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 5
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:385: unlink ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 3
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 4
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 5
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 6
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 2
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:373: write ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 7
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:88: Current entries in the dequeue (newest last):
+
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/lock_free_queue.c:110: Total entries: 7
+
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 1
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 2
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 5
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:385: unlink ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 3
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 4
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 5
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 0
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:365: open ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 6
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:361: the code at the time of showing to the ui is 2
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:373: write ops
+2024-10-29 12:35:21 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:335: inside the index 7
+2024-10-29 12:35:30 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[0] is 5
+2024-10-29 12:35:30 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[1] is 1
+2024-10-29 12:35:30 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[2] is 1
+2024-10-29 12:35:30 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[3] is 0
+2024-10-29 12:35:30 INFO  /media/tarun/ITB/code/my_projects/naarad/include/tui/tui.c:212: value[4] is 0

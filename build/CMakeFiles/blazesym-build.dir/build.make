@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/tarun/1Tb/code/my_projects/naarad
+CMAKE_SOURCE_DIR = /media/tarun/ITB/code/my_projects/naarad
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/tarun/1Tb/code/my_projects/naarad/build
+CMAKE_BINARY_DIR = /media/tarun/ITB/code/my_projects/naarad/build
 
 # Utility rule file for blazesym-build.
 
@@ -69,38 +69,38 @@ include CMakeFiles/blazesym-build.dir/progress.make
 CMakeFiles/blazesym-build: blazesym/src/blazesym-stamp/blazesym-build
 
 blazesym/src/blazesym-stamp/blazesym-build: blazesym/src/blazesym-stamp/blazesym-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Performing build step for 'blazesym'"
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/blazesym && cargo build --package=blazesym-c --release
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/blazesym && /usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Performing build step for 'blazesym'"
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/blazesym && cargo build --package=blazesym-c --release
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/blazesym && /usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-build
 
 blazesym/src/blazesym-stamp/blazesym-configure: blazesym/tmp/blazesym-cfgcmd.txt
 blazesym/src/blazesym-stamp/blazesym-configure: blazesym/src/blazesym-stamp/blazesym-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No configure step for 'blazesym'"
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/blazesym && /usr/bin/cmake -E echo_append
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/blazesym && /usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No configure step for 'blazesym'"
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/blazesym && /usr/bin/cmake -E echo_append
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/blazesym && /usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-configure
 
 blazesym/src/blazesym-stamp/blazesym-patch: blazesym/src/blazesym-stamp/blazesym-patch-info.txt
 blazesym/src/blazesym-stamp/blazesym-patch: blazesym/src/blazesym-stamp/blazesym-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No patch step for 'blazesym'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No patch step for 'blazesym'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-patch
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-patch
 
 blazesym/src/blazesym-stamp/blazesym-update: blazesym/src/blazesym-stamp/blazesym-update-info.txt
 blazesym/src/blazesym-stamp/blazesym-update: blazesym/src/blazesym-stamp/blazesym-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No update step for 'blazesym'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No update step for 'blazesym'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-update
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-update
 
 blazesym/src/blazesym-stamp/blazesym-download: blazesym/src/blazesym-stamp/blazesym-source_dirinfo.txt
 blazesym/src/blazesym-stamp/blazesym-download: blazesym/src/blazesym-stamp/blazesym-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No download step for 'blazesym'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No download step for 'blazesym'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-download
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-download
 
 blazesym/src/blazesym-stamp/blazesym-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'blazesym'"
-	/usr/bin/cmake -Dcfgdir= -P /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/tmp/blazesym-mkdirs.cmake
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'blazesym'"
+	/usr/bin/cmake -Dcfgdir= -P /media/tarun/ITB/code/my_projects/naarad/build/blazesym/tmp/blazesym-mkdirs.cmake
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-mkdir
 
 blazesym-build: CMakeFiles/blazesym-build
 blazesym-build: blazesym/src/blazesym-stamp/blazesym-build
@@ -121,6 +121,6 @@ CMakeFiles/blazesym-build.dir/clean:
 .PHONY : CMakeFiles/blazesym-build.dir/clean
 
 CMakeFiles/blazesym-build.dir/depend:
-	cd /media/tarun/1Tb/code/my_projects/naarad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/tarun/1Tb/code/my_projects/naarad /media/tarun/1Tb/code/my_projects/naarad /media/tarun/1Tb/code/my_projects/naarad/build /media/tarun/1Tb/code/my_projects/naarad/build /media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym-build.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /media/tarun/ITB/code/my_projects/naarad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/tarun/ITB/code/my_projects/naarad /media/tarun/ITB/code/my_projects/naarad /media/tarun/ITB/code/my_projects/naarad/build /media/tarun/ITB/code/my_projects/naarad/build /media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/blazesym-build.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/blazesym-build.dir/depend
 

@@ -2,6 +2,8 @@
 
 #include "../utils/logs.h"
 #include <mqueue.h>
+#include <stdbool.h>
+#include <stdint.h>
 
 #define QUEUE_NAME "/test_queue"
 // #define MAX_SIZE 1024
@@ -15,27 +17,29 @@
 #define MAX_RETRIES 5
 #define RETRY_DELAY_US 100000 // 100 ms
 #define MAX_SIZE 1024
+
+enum MessageType {
+  FILE_ACTIVITY_MONITORING = 0,
+  DATABASE_MONITORING = 1,
+  FILE_CLASSIFICATION = 2,
+  DATABASE_CLASSIFICATION = 3,
+  ACK_MESSAGE = 253,
+  STOP_MESSAG = 254
+};
+
 extern int dispatcher_to_consumer[NUM_GROUPS][NUM_CONSUMERS_PER_GROUP][2];
 extern int consumer_to_dispatcher[NUM_GROUPS][NUM_CONSUMERS_PER_GROUP][2];
 extern pid_t pids[NUM_GROUPS + NUM_CONSUMERS + 1]; // +1 for dispatcher
-extern const char *GROUP_NAMES[NUM_GROUPS];
-
-/*
-  struct data_t {
-  __u32 pid;
-  __u32 uid;
-  __u32 gid;
-  __u64 timestamp;
-  char comm[16];
-  char filename[256];
-  char new_filename[256];
-  char operation[16];
-};
-   */
 
 typedef struct {
-  char group[MAX_GROUP_NAME];
-  char text[MAX_SIZE - MAX_GROUP_NAME];
+  uint32_t gid;
+  uint32_t uid;
+  uint8_t category;
+  uint8_t op;
+  uint64_t timestamp;
+  char comm[16];
+  char file[128];
+  char new_file[128];
 } Message;
 
 int msg_q_init();

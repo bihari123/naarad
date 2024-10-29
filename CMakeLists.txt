@@ -2,6 +2,12 @@
 
 cmake_minimum_required(VERSION 3.16)
 project(naarad)
+# Find the Threads package
+find_package(Threads REQUIRED)
+
+# Find the ncurses package
+find_package(Curses REQUIRED)
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Tell cmake where to find BpfObject module
@@ -105,13 +111,18 @@ bpf_object(file_monitor src/file_monitor.bpf.c)
 add_dependencies(file_monitor_skel libbpf-build bpftool-build)
 
 # Build the main executable
-add_executable(file_monitor 
+add_executable(naarad 
     src/file_monitor.c
     ${INCLUDE_SOURCES}
 )
 
 # Link the BPF skeleton and any other necessary libraries
-target_link_libraries(file_monitor 
-    file_monitor_skel
+target_link_libraries(naarad 
+   
+   PRIVATE file_monitor_skel
+   Threads::Threads
+   atomic
+        ${CURSES_LIBRARIES}
+
     # Add any other libraries here if needed
 )

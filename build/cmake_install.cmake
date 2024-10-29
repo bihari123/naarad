@@ -1,4 +1,4 @@
-# Install script for directory: /media/tarun/1Tb/code/my_projects/naarad
+# Install script for directory: /media/tarun/ITB/code/my_projects/naarad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/tarun/1Tb/code/my_projects/naarad/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/tarun/ITB/code/my_projects/naarad/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

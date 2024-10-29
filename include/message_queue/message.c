@@ -1,9 +1,9 @@
 #include "message.h"
 #include "consumer.h"
-#include "producer.h"
 #include <errno.h>
 #include <fcntl.h>
 #include <mqueue.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -140,66 +140,51 @@ void dispatcher(int consumer_read_pipes[NUM_GROUPS][NUM_CONSUMERS_PER_GROUP],
 
   while (!must_stop) {
     ssize_t bytes_read = mq_receive(MQ, (char *)&msg, sizeof(Message), NULL);
-    log_trace("got the message in dispatcher");
     if (bytes_read >= 0) {
-      if (!strncmp(msg.text, MSG_STOP, strlen(MSG_STOP))) {
+      if (msg.op == STOP_MESSAG) {
         must_stop = 1;
         log_trace("Dispatcher received stop message\n");
       } else {
-        int group_index = -1;
-        for (int i = 0; i < NUM_GROUPS; i++) {
-          if (strcmp(msg.group, GROUP_NAMES[i]) == 0) {
-            group_index = i;
-            break;
-          }
+        uint8_t group_index = msg.category;
+
+        // Send message to the current consumer in the group
+        if (write(consumer_write_pipes[group_index]
+                                      [current_consumer[group_index]],
+                  &msg, sizeof(Message)) == -1) {
+          perror("write");
         }
 
-        if (group_index != -1) {
-          log_trace("send to the consumer");
-          // Send message to the current consumer in the group
-          if (write(consumer_write_pipes[group_index]
-                                        [current_consumer[group_index]],
-                    &msg, sizeof(Message)) == -1) {
-            perror("write");
-          }
+        // Wait for acknowledgement
+        FD_ZERO(&read_fds);
+        FD_SET(consumer_read_pipes[group_index][current_consumer[group_index]],
+               &read_fds);
 
-          log_trace("waiting for the ack");
-          // Wait for acknowledgement
-          FD_ZERO(&read_fds);
-          FD_SET(
-              consumer_read_pipes[group_index][current_consumer[group_index]],
-              &read_fds);
+        struct timeval timeout;
+        timeout.tv_sec = 5; // 5 seconds timeout
+        timeout.tv_usec = 0;
 
-          struct timeval timeout;
-          timeout.tv_sec = 5; // 5 seconds timeout
-          timeout.tv_usec = 0;
-
-          int ready = select(max_fd + 1, &read_fds, NULL, NULL, &timeout);
-          if (ready == -1) {
-            perror("select");
-          } else if (ready == 0) {
-            printf("Timeout waiting for acknowledgement from consumer %d in "
-                   "group %s\n",
-                   current_consumer[group_index], GROUP_NAMES[group_index]);
-            usleep(500000);
-          } else {
-            if (read(consumer_read_pipes[group_index]
-                                        [current_consumer[group_index]],
-                     &ack_msg, sizeof(Message)) > 0) {
-              if (!strncmp(ack_msg.text, MSG_ACK, strlen(MSG_ACK))) {
-                printf(
-                    "Received acknowledgement from consumer %d in group %s\n",
-                    current_consumer[group_index], GROUP_NAMES[group_index]);
-              }
+        int ready = select(max_fd + 1, &read_fds, NULL, NULL, &timeout);
+        if (ready == -1) {
+          perror("select");
+        } else if (ready == 0) {
+          printf("Timeout waiting for acknowledgement from consumer %d in "
+                 "group %s\n",
+                 current_consumer[group_index], GROUP_NAMES[group_index]);
+          usleep(500000);
+        } else {
+          if (read(consumer_read_pipes[group_index]
+                                      [current_consumer[group_index]],
+                   &ack_msg, sizeof(Message)) > 0) {
+            if (ack_msg.op == ACK_MESSAGE) {
+              printf("Received acknowledgement from consumer %d in group %s\n",
+                     current_consumer[group_index], GROUP_NAMES[group_index]);
             }
           }
-
-          log_trace("move to the next consumer");
-          // Move to the next consumer in the group (round-robin)
-          current_consumer[group_index] =
-              (current_consumer[group_index] + 1) % NUM_CONSUMERS_PER_GROUP;
-          log_trace("move successful");
         }
+
+        // Move to the next consumer in the group (round-robin)
+        current_consumer[group_index] =
+            (current_consumer[group_index] + 1) % NUM_CONSUMERS_PER_GROUP;
       }
     } else if (errno != EAGAIN) {
       perror("mq_receive");
@@ -210,9 +195,9 @@ void dispatcher(int consumer_read_pipes[NUM_GROUPS][NUM_CONSUMERS_PER_GROUP],
   // Send stop message to all consumers
   printf("Dispatcher sending stop messages to all consumers\n");
   Message stop_msg;
-  strncpy(stop_msg.text, MSG_STOP, sizeof(stop_msg.text));
+  stop_msg.op = STOP_MESSAG;
   for (int i = 0; i < NUM_GROUPS; i++) {
-    strncpy(stop_msg.group, GROUP_NAMES[i], MAX_GROUP_NAME);
+    /* strncpy(stop_msg.group, GROUP_NAMES[i], MAX_GROUP_NAME); */
     for (int j = 0; j < NUM_CONSUMERS_PER_GROUP; j++) {
       if (write(consumer_write_pipes[i][j], &stop_msg, sizeof(Message)) == -1) {
         perror("write stop message");
@@ -234,7 +219,7 @@ void dispatcher(int consumer_read_pipes[NUM_GROUPS][NUM_CONSUMERS_PER_GROUP],
                j, GROUP_NAMES[i]);
       } else {
         if (read(consumer_read_pipes[i][j], &ack_msg, sizeof(Message)) > 0) {
-          if (!strncmp(ack_msg.text, MSG_ACK, strlen(MSG_ACK))) {
+          if (ack_msg.op == ACK_MESSAGE) {
             printf(
                 "Received stop acknowledgement from consumer %d in group %s\n",
                 j, GROUP_NAMES[i]);
@@ -255,7 +240,7 @@ void dispatcher(int consumer_read_pipes[NUM_GROUPS][NUM_CONSUMERS_PER_GROUP],
 
 int send_with_retry(const char *msg_ptr, size_t msg_len,
                     unsigned int msg_prio) {
-  log_trace("inside send_with_retry");
+  /* log_info("inside send_with_retry"); */
   if (MQ == (mqd_t)-1) {
     // global message queue is not initilized
     perror("global message queue not defined");
@@ -264,7 +249,7 @@ int send_with_retry(const char *msg_ptr, size_t msg_len,
 
   int retries = 0;
   while (retries < MAX_RETRIES) {
-    log_trace("sending to the queue");
+    /* log_info("sending to the queue"); */
     if (mq_send(MQ, msg_ptr, msg_len, msg_prio) != -1) {
       return 0; // Success
     }
@@ -279,21 +264,4 @@ int send_with_retry(const char *msg_ptr, size_t msg_len,
   }
   fprintf(stderr, "Failed to send message after %d retries\n", MAX_RETRIES);
   return -1;
-}
-
-static int i = 0;
-int pass_message(Message msg) {
-  i++;
-  pids[NUM_CONSUMERS + 1 + i] = fork();
-  if (pids[NUM_CONSUMERS + 1 + i] < 0) {
-    perror("fork");
-    /* exit(1); */
-    return 1;
-  } else if (pids[NUM_CONSUMERS + 1 + i] == 0) {
-    printf("inside pass message");
-    // Child (producer) process
-    producer(i, msg);
-    exit(0);
-  }
-  return 0;
 }

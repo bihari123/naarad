@@ -2,28 +2,28 @@
 	"sources" : 
 	[
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/libbpf-build"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/libbpf-build"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/libbpf-build.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/libbpf-build.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-build.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-build.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-configure.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-configure.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-patch.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-patch.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-update.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-update.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-download.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-download.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-mkdir.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/libbpf/src/libbpf-stamp/libbpf-mkdir.rule"
 		}
 	],
 	"target" : 

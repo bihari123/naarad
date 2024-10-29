@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/blazesym"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/blazesym.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/blazesym-complete.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/blazesym-complete.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-build.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-build.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-configure.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-configure.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-download.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-download.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-install.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-install.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-mkdir.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-mkdir.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-patch.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-patch.rule"
 		},
 		{
-			"file" : "/media/tarun/1Tb/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-update.rule"
+			"file" : "/media/tarun/ITB/code/my_projects/naarad/build/blazesym/src/blazesym-stamp/blazesym-update.rule"
 		}
 	],
 	"target" : 

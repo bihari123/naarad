@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/tarun/1Tb/code/my_projects/naarad
+CMAKE_SOURCE_DIR = /media/tarun/ITB/code/my_projects/naarad
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/tarun/1Tb/code/my_projects/naarad/build
+CMAKE_BINARY_DIR = /media/tarun/ITB/code/my_projects/naarad/build
 
 # Utility rule file for bpftool.
 
@@ -76,49 +76,49 @@ CMakeFiles/bpftool-complete: bpftool/src/bpftool-stamp/bpftool-patch
 CMakeFiles/bpftool-complete: bpftool/src/bpftool-stamp/bpftool-configure
 CMakeFiles/bpftool-complete: bpftool/src/bpftool-stamp/bpftool-build
 CMakeFiles/bpftool-complete: bpftool/src/bpftool-stamp/bpftool-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'bpftool'"
-	/usr/bin/cmake -E make_directory /media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool-complete
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'bpftool'"
+	/usr/bin/cmake -E make_directory /media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/bpftool-complete
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-done
 
 bpftool/src/bpftool-stamp/bpftool-build: bpftool/src/bpftool-stamp/bpftool-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'bpftool'"
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src && make bootstrap OUTPUT=/media/tarun/1Tb/code/my_projects/naarad/build/bpftool/
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'bpftool'"
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src && make bootstrap OUTPUT=/media/tarun/ITB/code/my_projects/naarad/build/bpftool/
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-build
 
 bpftool/src/bpftool-stamp/bpftool-configure: bpftool/tmp/bpftool-cfgcmd.txt
 bpftool/src/bpftool-stamp/bpftool-configure: bpftool/src/bpftool-stamp/bpftool-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'bpftool'"
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E echo_append
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'bpftool'"
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E echo_append
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-configure
 
 bpftool/src/bpftool-stamp/bpftool-download: bpftool/src/bpftool-stamp/bpftool-source_dirinfo.txt
 bpftool/src/bpftool-stamp/bpftool-download: bpftool/src/bpftool-stamp/bpftool-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'bpftool'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'bpftool'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-download
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-download
 
 bpftool/src/bpftool-stamp/bpftool-install: bpftool/src/bpftool-stamp/bpftool-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'bpftool'"
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E echo_append
-	cd /media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'bpftool'"
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E echo_append
+	cd /media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src && /usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-install
 
 bpftool/src/bpftool-stamp/bpftool-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'bpftool'"
-	/usr/bin/cmake -Dcfgdir= -P /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/tmp/bpftool-mkdirs.cmake
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'bpftool'"
+	/usr/bin/cmake -Dcfgdir= -P /media/tarun/ITB/code/my_projects/naarad/build/bpftool/tmp/bpftool-mkdirs.cmake
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-mkdir
 
 bpftool/src/bpftool-stamp/bpftool-patch: bpftool/src/bpftool-stamp/bpftool-patch-info.txt
 bpftool/src/bpftool-stamp/bpftool-patch: bpftool/src/bpftool-stamp/bpftool-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'bpftool'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'bpftool'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-patch
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-patch
 
 bpftool/src/bpftool-stamp/bpftool-update: bpftool/src/bpftool-stamp/bpftool-update-info.txt
 bpftool/src/bpftool-stamp/bpftool-update: bpftool/src/bpftool-stamp/bpftool-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'bpftool'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'bpftool'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /media/tarun/1Tb/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-update
+	/usr/bin/cmake -E touch /media/tarun/ITB/code/my_projects/naarad/build/bpftool/src/bpftool-stamp/bpftool-update
 
 bpftool: CMakeFiles/bpftool
 bpftool: CMakeFiles/bpftool-complete
@@ -141,6 +141,6 @@ CMakeFiles/bpftool.dir/clean:
 .PHONY : CMakeFiles/bpftool.dir/clean
 
 CMakeFiles/bpftool.dir/depend:
-	cd /media/tarun/1Tb/code/my_projects/naarad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/tarun/1Tb/code/my_projects/naarad /media/tarun/1Tb/code/my_projects/naarad /media/tarun/1Tb/code/my_projects/naarad/build /media/tarun/1Tb/code/my_projects/naarad/build /media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles/bpftool.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /media/tarun/ITB/code/my_projects/naarad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/tarun/ITB/code/my_projects/naarad /media/tarun/ITB/code/my_projects/naarad /media/tarun/ITB/code/my_projects/naarad/build /media/tarun/ITB/code/my_projects/naarad/build /media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles/bpftool.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bpftool.dir/depend
 

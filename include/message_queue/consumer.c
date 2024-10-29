@@ -1,5 +1,6 @@
 #include "consumer.h"
-#include <string.h>
+#include "../tui/tui.h"
+#include "message.h"
 #include <unistd.h>
 
 void consumer(int id, const char *group, int read_fd, int write_fd) {
@@ -13,18 +14,17 @@ void consumer(int id, const char *group, int read_fd, int write_fd) {
     ssize_t bytes_read = read(read_fd, &msg, sizeof(Message));
 
     if (bytes_read > 0) {
-      if (!strncmp(msg.text, MSG_STOP, strlen(MSG_STOP))) {
+      if (msg.op == STOP_MESSAG) {
         must_stop = 1;
         log_info("Consumer %d (Group %s) received stop message\n", id, group);
       } else {
-        /* log_trace("Consumer %d (Group %s) received: %s\n", id, group,
-         * msg.text); */
-        printf("Consumer %d (Group %s) received: %s\n", id, group, msg.text);
+        log_info("Consumer %d (Group %s) received: %s %s %d  \n", id, group,
+                 msg.file, msg.comm, msg.op);
+        increment_counter(msg.op);
       }
 
       // Send acknowledgement
-      strncpy(ack_msg.group, group, MAX_GROUP_NAME);
-      strncpy(ack_msg.text, MSG_ACK, sizeof(ack_msg.text));
+      ack_msg.op = ACK_MESSAGE;
       if (write(write_fd, &ack_msg, sizeof(Message)) == -1) {
         perror("write ack message");
       }

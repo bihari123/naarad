@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/tarun/1Tb/code/my_projects/naarad
+CMAKE_SOURCE_DIR = /media/tarun/ITB/code/my_projects/naarad
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/tarun/1Tb/code/my_projects/naarad/build
+CMAKE_BINARY_DIR = /media/tarun/ITB/code/my_projects/naarad/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles /media/tarun/1Tb/code/my_projects/naarad/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles /media/tarun/ITB/code/my_projects/naarad/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/1Tb/code/my_projects/naarad/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/tarun/ITB/code/my_projects/naarad/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -195,24 +195,24 @@ blazesym-build/fast:
 .PHONY : blazesym-build/fast
 
 #=============================================================================
-# Target rules for targets named file_monitor
+# Target rules for targets named naarad
 
 # Build rule for target.
-file_monitor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 file_monitor
-.PHONY : file_monitor
+naarad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 naarad
+.PHONY : naarad
 
 # fast build rule for target.
-file_monitor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/build
-.PHONY : file_monitor/fast
+naarad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/build
+.PHONY : naarad/fast
 
 include/message_queue/consumer.o: include/message_queue/consumer.c.o
 .PHONY : include/message_queue/consumer.o
 
 # target to build an object file
 include/message_queue/consumer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/consumer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/consumer.c.o
 .PHONY : include/message_queue/consumer.c.o
 
 include/message_queue/consumer.i: include/message_queue/consumer.c.i
@@ -220,7 +220,7 @@ include/message_queue/consumer.i: include/message_queue/consumer.c.i
 
 # target to preprocess a source file
 include/message_queue/consumer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/consumer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/consumer.c.i
 .PHONY : include/message_queue/consumer.c.i
 
 include/message_queue/consumer.s: include/message_queue/consumer.c.s
@@ -228,7 +228,7 @@ include/message_queue/consumer.s: include/message_queue/consumer.c.s
 
 # target to generate assembly for a file
 include/message_queue/consumer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/consumer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/consumer.c.s
 .PHONY : include/message_queue/consumer.c.s
 
 include/message_queue/message.o: include/message_queue/message.c.o
@@ -236,7 +236,7 @@ include/message_queue/message.o: include/message_queue/message.c.o
 
 # target to build an object file
 include/message_queue/message.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/message.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/message.c.o
 .PHONY : include/message_queue/message.c.o
 
 include/message_queue/message.i: include/message_queue/message.c.i
@@ -244,7 +244,7 @@ include/message_queue/message.i: include/message_queue/message.c.i
 
 # target to preprocess a source file
 include/message_queue/message.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/message.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/message.c.i
 .PHONY : include/message_queue/message.c.i
 
 include/message_queue/message.s: include/message_queue/message.c.s
@@ -252,7 +252,7 @@ include/message_queue/message.s: include/message_queue/message.c.s
 
 # target to generate assembly for a file
 include/message_queue/message.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/message.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/message.c.s
 .PHONY : include/message_queue/message.c.s
 
 include/message_queue/producer.o: include/message_queue/producer.c.o
@@ -260,7 +260,7 @@ include/message_queue/producer.o: include/message_queue/producer.c.o
 
 # target to build an object file
 include/message_queue/producer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/producer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/producer.c.o
 .PHONY : include/message_queue/producer.c.o
 
 include/message_queue/producer.i: include/message_queue/producer.c.i
@@ -268,7 +268,7 @@ include/message_queue/producer.i: include/message_queue/producer.c.i
 
 # target to preprocess a source file
 include/message_queue/producer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/producer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/producer.c.i
 .PHONY : include/message_queue/producer.c.i
 
 include/message_queue/producer.s: include/message_queue/producer.c.s
@@ -276,15 +276,87 @@ include/message_queue/producer.s: include/message_queue/producer.c.s
 
 # target to generate assembly for a file
 include/message_queue/producer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/message_queue/producer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/message_queue/producer.c.s
 .PHONY : include/message_queue/producer.c.s
+
+include/tui/hashmap.o: include/tui/hashmap.c.o
+.PHONY : include/tui/hashmap.o
+
+# target to build an object file
+include/tui/hashmap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/hashmap.c.o
+.PHONY : include/tui/hashmap.c.o
+
+include/tui/hashmap.i: include/tui/hashmap.c.i
+.PHONY : include/tui/hashmap.i
+
+# target to preprocess a source file
+include/tui/hashmap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/hashmap.c.i
+.PHONY : include/tui/hashmap.c.i
+
+include/tui/hashmap.s: include/tui/hashmap.c.s
+.PHONY : include/tui/hashmap.s
+
+# target to generate assembly for a file
+include/tui/hashmap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/hashmap.c.s
+.PHONY : include/tui/hashmap.c.s
+
+include/tui/lock_free_queue.o: include/tui/lock_free_queue.c.o
+.PHONY : include/tui/lock_free_queue.o
+
+# target to build an object file
+include/tui/lock_free_queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/lock_free_queue.c.o
+.PHONY : include/tui/lock_free_queue.c.o
+
+include/tui/lock_free_queue.i: include/tui/lock_free_queue.c.i
+.PHONY : include/tui/lock_free_queue.i
+
+# target to preprocess a source file
+include/tui/lock_free_queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/lock_free_queue.c.i
+.PHONY : include/tui/lock_free_queue.c.i
+
+include/tui/lock_free_queue.s: include/tui/lock_free_queue.c.s
+.PHONY : include/tui/lock_free_queue.s
+
+# target to generate assembly for a file
+include/tui/lock_free_queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/lock_free_queue.c.s
+.PHONY : include/tui/lock_free_queue.c.s
+
+include/tui/tui.o: include/tui/tui.c.o
+.PHONY : include/tui/tui.o
+
+# target to build an object file
+include/tui/tui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/tui.c.o
+.PHONY : include/tui/tui.c.o
+
+include/tui/tui.i: include/tui/tui.c.i
+.PHONY : include/tui/tui.i
+
+# target to preprocess a source file
+include/tui/tui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/tui.c.i
+.PHONY : include/tui/tui.c.i
+
+include/tui/tui.s: include/tui/tui.c.s
+.PHONY : include/tui/tui.s
+
+# target to generate assembly for a file
+include/tui/tui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/tui/tui.c.s
+.PHONY : include/tui/tui.c.s
 
 include/userspace/ebpf.o: include/userspace/ebpf.c.o
 .PHONY : include/userspace/ebpf.o
 
 # target to build an object file
 include/userspace/ebpf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/userspace/ebpf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/userspace/ebpf.c.o
 .PHONY : include/userspace/ebpf.c.o
 
 include/userspace/ebpf.i: include/userspace/ebpf.c.i
@@ -292,7 +364,7 @@ include/userspace/ebpf.i: include/userspace/ebpf.c.i
 
 # target to preprocess a source file
 include/userspace/ebpf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/userspace/ebpf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/userspace/ebpf.c.i
 .PHONY : include/userspace/ebpf.c.i
 
 include/userspace/ebpf.s: include/userspace/ebpf.c.s
@@ -300,7 +372,7 @@ include/userspace/ebpf.s: include/userspace/ebpf.c.s
 
 # target to generate assembly for a file
 include/userspace/ebpf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/userspace/ebpf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/userspace/ebpf.c.s
 .PHONY : include/userspace/ebpf.c.s
 
 include/utils/log_init.o: include/utils/log_init.c.o
@@ -308,7 +380,7 @@ include/utils/log_init.o: include/utils/log_init.c.o
 
 # target to build an object file
 include/utils/log_init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/utils/log_init.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/log_init.c.o
 .PHONY : include/utils/log_init.c.o
 
 include/utils/log_init.i: include/utils/log_init.c.i
@@ -316,7 +388,7 @@ include/utils/log_init.i: include/utils/log_init.c.i
 
 # target to preprocess a source file
 include/utils/log_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/utils/log_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/log_init.c.i
 .PHONY : include/utils/log_init.c.i
 
 include/utils/log_init.s: include/utils/log_init.c.s
@@ -324,7 +396,7 @@ include/utils/log_init.s: include/utils/log_init.c.s
 
 # target to generate assembly for a file
 include/utils/log_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/utils/log_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/log_init.c.s
 .PHONY : include/utils/log_init.c.s
 
 include/utils/logs.o: include/utils/logs.c.o
@@ -332,7 +404,7 @@ include/utils/logs.o: include/utils/logs.c.o
 
 # target to build an object file
 include/utils/logs.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/utils/logs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/logs.c.o
 .PHONY : include/utils/logs.c.o
 
 include/utils/logs.i: include/utils/logs.c.i
@@ -340,7 +412,7 @@ include/utils/logs.i: include/utils/logs.c.i
 
 # target to preprocess a source file
 include/utils/logs.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/utils/logs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/logs.c.i
 .PHONY : include/utils/logs.c.i
 
 include/utils/logs.s: include/utils/logs.c.s
@@ -348,15 +420,39 @@ include/utils/logs.s: include/utils/logs.c.s
 
 # target to generate assembly for a file
 include/utils/logs.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/include/utils/logs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/logs.c.s
 .PHONY : include/utils/logs.c.s
+
+include/utils/string_helper.o: include/utils/string_helper.c.o
+.PHONY : include/utils/string_helper.o
+
+# target to build an object file
+include/utils/string_helper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/string_helper.c.o
+.PHONY : include/utils/string_helper.c.o
+
+include/utils/string_helper.i: include/utils/string_helper.c.i
+.PHONY : include/utils/string_helper.i
+
+# target to preprocess a source file
+include/utils/string_helper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/string_helper.c.i
+.PHONY : include/utils/string_helper.c.i
+
+include/utils/string_helper.s: include/utils/string_helper.c.s
+.PHONY : include/utils/string_helper.s
+
+# target to generate assembly for a file
+include/utils/string_helper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/include/utils/string_helper.c.s
+.PHONY : include/utils/string_helper.c.s
 
 src/file_monitor.o: src/file_monitor.c.o
 .PHONY : src/file_monitor.o
 
 # target to build an object file
 src/file_monitor.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/src/file_monitor.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/src/file_monitor.c.o
 .PHONY : src/file_monitor.c.o
 
 src/file_monitor.i: src/file_monitor.c.i
@@ -364,7 +460,7 @@ src/file_monitor.i: src/file_monitor.c.i
 
 # target to preprocess a source file
 src/file_monitor.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/src/file_monitor.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/src/file_monitor.c.i
 .PHONY : src/file_monitor.c.i
 
 src/file_monitor.s: src/file_monitor.c.s
@@ -372,7 +468,7 @@ src/file_monitor.s: src/file_monitor.c.s
 
 # target to generate assembly for a file
 src/file_monitor.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_monitor.dir/build.make CMakeFiles/file_monitor.dir/src/file_monitor.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/naarad.dir/build.make CMakeFiles/naarad.dir/src/file_monitor.c.s
 .PHONY : src/file_monitor.c.s
 
 # Help Target
@@ -389,7 +485,7 @@ help:
 	@echo "... bpftool-build"
 	@echo "... libbpf"
 	@echo "... libbpf-build"
-	@echo "... file_monitor"
+	@echo "... naarad"
 	@echo "... include/message_queue/consumer.o"
 	@echo "... include/message_queue/consumer.i"
 	@echo "... include/message_queue/consumer.s"
@@ -399,6 +495,15 @@ help:
 	@echo "... include/message_queue/producer.o"
 	@echo "... include/message_queue/producer.i"
 	@echo "... include/message_queue/producer.s"
+	@echo "... include/tui/hashmap.o"
+	@echo "... include/tui/hashmap.i"
+	@echo "... include/tui/hashmap.s"
+	@echo "... include/tui/lock_free_queue.o"
+	@echo "... include/tui/lock_free_queue.i"
+	@echo "... include/tui/lock_free_queue.s"
+	@echo "... include/tui/tui.o"
+	@echo "... include/tui/tui.i"
+	@echo "... include/tui/tui.s"
 	@echo "... include/userspace/ebpf.o"
 	@echo "... include/userspace/ebpf.i"
 	@echo "... include/userspace/ebpf.s"
@@ -408,6 +513,9 @@ help:
 	@echo "... include/utils/logs.o"
 	@echo "... include/utils/logs.i"
 	@echo "... include/utils/logs.s"
+	@echo "... include/utils/string_helper.o"
+	@echo "... include/utils/string_helper.i"
+	@echo "... include/utils/string_helper.s"
 	@echo "... src/file_monitor.o"
 	@echo "... src/file_monitor.i"
 	@echo "... src/file_monitor.s"

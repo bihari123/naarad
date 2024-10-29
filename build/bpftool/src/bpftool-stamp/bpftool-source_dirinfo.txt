@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/media/tarun/1Tb/code/my_projects/naarad/third_party/bpftool/src
+source_dir=/media/tarun/ITB/code/my_projects/naarad/third_party/bpftool/src
 work_dir=
 

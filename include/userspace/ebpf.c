@@ -1,21 +1,27 @@
+
 #include "ebpf.h"
 #include "../message_queue/message.h"
 #include "../message_queue/producer.h"
-static const char *target_dir = "/media/tarun/1Tb/target";
+#include "../tui/hashmap.h"
+#include "../tui/lock_free_queue.h"
+#include "../tui/tui.h"
+#include "../utils/string_helper.h"
+#include <stdio.h>
+static const char *target_dir = "/media/tarun/ITB/target";
 
 static int libbpf_print_fn(enum libbpf_print_level level, const char *format,
                            va_list args) {
   return vfprintf(stderr, format, args);
 }
-static int i = 0;
 void handle_event(void *ctx, int cpu, void *data, __u32 data_sz) {
   const struct data_t *e = data;
+  /*
   struct tm *tm;
   char ts[32];
   time_t t;
+
   struct passwd *pw;
   struct group *gr;
-
   time(&t);
   tm = localtime(&t);
   strftime(ts, sizeof(ts), "%Y-%m-%d %H:%M:%S", tm);
@@ -36,15 +42,31 @@ void handle_event(void *ctx, int cpu, void *data, __u32 data_sz) {
   }
 
   printf("------------------------\n");
+*/
   Message msg;
-  int group_index = 2;
-  srand(time(NULL) ^ (group_index << 16));
+  msg.gid = e->gid;
+  msg.uid = e->uid;
+  msg.category = FILE_ACTIVITY_MONITORING;
+  log_info("the operations is %s", e->operation);
+  HashMapResult result = get(e->operation);
+  log_info("the operation code is %d", result.value);
+  if (result.found) {
 
-  strncpy(msg.group, GROUP_NAMES[group_index], MAX_GROUP_NAME);
-  snprintf(msg.text, sizeof(msg.text), "Message from producer %s: %d",
-           msg.group, i);
-  i++;
-  producer(i, msg);
+    if (result.value == OP_RENAME) {
+      snprintf(msg.new_file, sizeof(msg.new_file), "%s", e->new_filename);
+    }
+    msg.op = result.value;
+  } else {
+    log_info("operation %s not found in the hashmap", e->operation);
+    msg.op = OP_UNKNOWN;
+  }
+
+  log_info("the operation code for message is %d", msg.op);
+  snprintf(msg.comm, sizeof(msg.comm), "%s", e->comm);
+  snprintf(msg.file, sizeof(msg.file), "%s", e->filename);
+  increment_counter(msg.op);
+  pushRear(msg);
+  producer(FILE_ACTIVITY_MONITORING, msg);
 }
 
 struct file_monitor_bpf *setup_and_load_bpf(void) {
